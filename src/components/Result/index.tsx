@@ -6,7 +6,6 @@ import {
   IDiceNumber,
   getBalance,
   getCurrentBet,
-  resetCurrentBet,
   saveGame,
   updateBalance,
 } from '../../redux/slices/game.slice';
@@ -17,12 +16,11 @@ import {
   getTimerTitle,
   isTimerRunning,
   pause,
-  reset,
   start,
   updateTitle,
 } from '../../redux/slices/timer.slice';
 import { useEffect, useState } from 'react';
-import { BETTING_TIME, BETTING_TIMER_TITLE } from '../PlaceBets';
+import { BETTING_TIMER_TITLE } from '../PlaceBets';
 
 export const RESULT_TIME = 2;
 export const RESULT_TIMER_TITLE = 'RESULT';
