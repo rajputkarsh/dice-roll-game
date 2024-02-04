@@ -1,0 +1,28 @@
+.placeBets {
+  padding-inline: 2rem;
+
+  .betTitles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .dieRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+
+    .dice {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        max-width: 3rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
