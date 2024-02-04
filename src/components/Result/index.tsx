@@ -98,19 +98,6 @@ function Result() {
     }
   }, [timeLeft]);
 
-  const resetGame = () => {
-    setOverallWin(0);
-    setResult(-1);
-    dispatch(resetCurrentBet());
-
-    if (balance === 0) {
-      alert('Oops! You do not have enough money.');
-      dispatch(reset());
-    } else {
-      dispatch(start({ time: BETTING_TIME, title: BETTING_TIMER_TITLE }));
-    }
-  };
-
   if (timerTitle === BETTING_TIMER_TITLE) return null;
 
   return (
