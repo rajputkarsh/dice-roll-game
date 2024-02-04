@@ -60,7 +60,7 @@ function Result() {
         const newBalance = balance - bettingAmount + totalAmountWon;
 
         console.log(
-          `${result} saving game with data - `,
+          `${dice} saving game with data - `,
           JSON.stringify(
             {
               roundId: crypto.randomUUID(),
@@ -68,7 +68,7 @@ function Result() {
               bets: Object.entries(currentBet).map(([key, bet]) => ({
                 diceNumber: key as IDiceNumber,
                 amountPlaced: bet.amountPlaced,
-                won: key == result,
+                won: key == dice,
               })),
             },
             null,
@@ -83,7 +83,7 @@ function Result() {
             bets: Object.entries(currentBet).map(([key, bet]) => ({
               diceNumber: key as IDiceNumber,
               amountPlaced: bet.amountPlaced,
-              won: key == result,
+              won: key == dice,
             })),
           })
         );
