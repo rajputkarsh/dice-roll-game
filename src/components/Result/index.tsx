@@ -64,7 +64,7 @@ function Result() {
           JSON.stringify(
             {
               roundId: crypto.randomUUID(),
-              winAmount: overallWin,
+              winAmount: totalAmountWon,
               bets: Object.entries(currentBet).map(([key, bet]) => ({
                 diceNumber: key as IDiceNumber,
                 amountPlaced: bet.amountPlaced,
@@ -79,7 +79,7 @@ function Result() {
         dispatch(
           saveGame({
             roundId: crypto.randomUUID(),
-            winAmount: overallWin,
+            winAmount: totalAmountWon,
             bets: Object.entries(currentBet).map(([key, bet]) => ({
               diceNumber: key as IDiceNumber,
               amountPlaced: bet.amountPlaced,
