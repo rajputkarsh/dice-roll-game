@@ -45,6 +45,8 @@ function PlaceBets() {
   };
 
   const placeBetOnDice = (diceNumber: IDiceNumber, amount: number): void => {
+    if (amount < 0) return;
+
     const currentTotalBet = getTotalBetExcludingDiceNumber(diceNumber);
 
     if (currentBalance < currentTotalBet + amount) {
