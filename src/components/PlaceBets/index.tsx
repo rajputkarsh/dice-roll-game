@@ -70,6 +70,7 @@ function PlaceBets() {
                 <img src={`./dice${diceNumber}.png`} />
                 <input
                   type="number"
+                  min={0}
                   value={getBetValueOnDice(diceNumber as IDiceNumber)}
                   disabled={
                     timerTitle !== BETTING_TIMER_TITLE || timeLeft === 0
